@@ -856,13 +856,7 @@ textarea.input-field {
 
 
 
-.hero-picture img {
-  width: 100%;      /* maksimal lebar container */
-  max-width: 400px; /* batasi ukuran gambar di HP */
-  height: auto;     /* jaga proporsional */
-  display: block;
-  margin: 0 auto;   /* center */
-}
+
 
 /*-----------------------------------*\
  * #FOOTER
@@ -1395,4 +1389,60 @@ textarea.input-field {
 
   .about-banner { max-width: 450px; }
 
+}
+
+/* ======= Logo untuk layar kecil ======= */
+@media (max-width: 768px) {
+  .logo {
+    min-width: unset;       /* hilangkan min-width default */
+    max-width: 120px;       /* sesuaikan ukuran maksimal */
+  }
+
+  .logo a {
+    font-size: 1.5rem;      /* kecilkan font logo */
+  }
+
+  .logo span {
+    margin-left: 1px;       /* jarak huruf kecilkan agar pas */
+    font-size: 1.2rem;      /* kecilkan sedikit warna highlight */
+  }
+
+  /* Jika navbar-actions terlalu dekat, beri jarak */
+  .navbar-actions {
+    gap: 10px;
+  }
+}
+/* ======================================
+   RESPONSIVE LOGO SKILLS & TOOLS (MOBILE)
+   ====================================== */
+@media screen and (max-width: 768px) {
+  /* bungkus list menjadi grid 3 kolom untuk mobile */
+  .skills-list,
+  .tools-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 12px; /* jarak antar logo */
+    justify-items: center; /* tengah horizontal logo */
+    padding: 0;
+  }
+
+  /* setiap skill-card disesuaikan */
+  .skill-card {
+    width: 100%; /* agar mengikuti kolom grid */
+    text-align: center;
+  }
+
+  /* gambar logo otomatis mengecil jika perlu */
+  .skill-card .card-icon img {
+    max-width: 50px; /* ukuran logo maksimal */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* tooltip tetap di bawah logo */
+  .skill-card .tooltip {
+    font-size: 0.7rem;
+    margin-top: 4px;
+  }
 }
