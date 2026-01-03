@@ -856,7 +856,13 @@ textarea.input-field {
 
 
 
-
+.hero-picture img {
+  width: 100%;      /* maksimal lebar container */
+  max-width: 400px; /* batasi ukuran gambar di HP */
+  height: auto;     /* jaga proporsional */
+  display: block;
+  margin: 0 auto;   /* center */
+}
 
 /*-----------------------------------*\
  * #FOOTER
